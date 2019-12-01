@@ -43,7 +43,7 @@ current issues:
         assert_eq!(c, Triple { a: 1, b: 2, c: 3 });
 
         let s = "Size 1 2";
-        let size = serde_scan::from_str(s).unwrap();
-        assert_eq!(c, Command::Size(1, 2));
+        let size:Command = serde_scan::from_str(s).unwrap();
+        assert_eq!(size, Command::Size(1, 2));
     }
 ```
